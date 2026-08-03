@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Confirmed — HappyHabit</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #FFFCF5;
+    color: #3d2800;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(61,40,0,0.08);
+    padding: 36px 28px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  .icon { font-size: 48px; margin-bottom: 8px; }
+  h1 { font-size: 22px; margin-bottom: 8px; }
+  p.subtitle { font-size: 14px; color: #6b6358; margin-bottom: 4px; line-height: 1.5; }
+  .message {
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    background: #97C45920;
+    color: #3B6D11;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="icon" id="icon">✅</div>
+    <h1 id="title">Email Confirmed!</h1>
+    <p class="subtitle" id="subtitle">
+      Your HappyHabit account is now active. Head back to the app and log in to get started.
+    </p>
+    <div class="message" id="message">You can close this page now.</div>
+  </div>
+
+  <script>
+    // Supabase's confirmation link verifies the token and marks the email
+    // confirmed server-side *before* redirecting here — by the time this
+    // page loads, confirmation has already happened. A valid arrival from
+    // that flow carries an access_token in the URL hash fragment (same
+    // pattern as reset-password.html). If it's missing, this page was
+    // likely opened directly (bookmarked, reloaded, etc.) rather than via
+    // the email link, so we show a more neutral message instead of
+    // re-asserting a "confirmed" claim we can't verify.
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      const hasToken = hash && hash.includes('access_token');
+
+      if (!hasToken) {
+        document.getElementById('icon').textContent = '👋';
+        document.getElementById('title').textContent = 'Welcome to HappyHabit';
+        document.getElementById('subtitle').textContent =
+          "If you just confirmed your email, you're all set — head back to the app and log in.";
+        document.getElementById('message').textContent =
+          'Already confirmed? You can close this page and open the app.';
+      }
+    });
+  </script>
+
+</body>
+</html>
