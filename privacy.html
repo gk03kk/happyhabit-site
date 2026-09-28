@@ -60,6 +60,7 @@
   <h2>3. AI-Assisted School Calendar Import</h2>
   <p>HappyHabit offers an optional feature that lets a parent upload a photo or PDF of a school calendar to automatically extract event details. When you use this feature:</p>
   <ul>
+    <li>Before the file picker opens, the app shows a <strong>"Before You Import"</strong> notice that reads: <em>"Your document will be processed to find event dates and details — that's the only reason it's used. It's handled securely and never stored on our servers. School documents often include extra details we don't need, like staff names or addresses — we only look for calendar information. Please just make sure you're authorised to share whatever you upload."</em> You must tap <strong>"Sounds Good, Continue"</strong> to proceed. Tapping <strong>"Cancel"</strong> ends the import, and no file is selected, read, or sent anywhere. When you continue, we attempt to record your confirmation, with the date and time, against your account</li>
     <li>The uploaded PDF or image is sent to <strong>Anthropic</strong> (Claude AI) for processing, solely to extract event details such as dates, titles, and times</li>
     <li>The uploaded file itself is <strong>not stored</strong> after processing — it is discarded once the AI has returned the extracted results</li>
     <li>Only the <strong>confirmed calendar events</strong> you choose to import, along with basic usage metadata (such as upload count and date), are saved to your account</li>
