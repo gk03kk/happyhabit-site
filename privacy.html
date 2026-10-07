@@ -33,7 +33,7 @@
 </header>
 <div class="container">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 22 August 2026 · Effective date: 22 August 2026</p>
+  <p class="updated">Last updated: 7 October 2026 · Effective date: 7 October 2026</p>
 
   <div class="highlight">
     <strong>Summary:</strong> HappyHabit is a family task and reward app for parents. We collect only what is necessary to provide the service. We do not sell your data. We do not share it with advertisers. You can delete your account and all data at any time.
@@ -60,17 +60,21 @@
   <h2>3. AI-Assisted School Calendar Import</h2>
   <p>HappyHabit offers an optional feature that lets a parent upload a photo or PDF of a school calendar to automatically extract event details. When you use this feature:</p>
   <ul>
-    <li>Before the file picker opens, the app shows a <strong>"Before You Import"</strong> notice that reads: <em>"Your document will be processed to find event dates and details — that's the only reason it's used. It's handled securely and never stored on our servers. School documents often include extra details we don't need, like staff names or addresses — we only look for calendar information. Please just make sure you're authorised to share whatever you upload."</em> You must tap <strong>"Sounds Good, Continue"</strong> to proceed. Tapping <strong>"Cancel"</strong> ends the import, and no file is selected, read, or sent anywhere. When you continue, we attempt to record your confirmation, with the date and time, against your account</li>
-    <li>The uploaded PDF or image is sent to <strong>Anthropic</strong> (Claude AI) for processing, solely to extract event details such as dates, titles, and times</li>
-    <li>The uploaded file itself is <strong>not stored</strong> after processing — it is discarded once the AI has returned the extracted results</li>
-    <li>Only the <strong>confirmed calendar events</strong> you choose to import, along with basic usage metadata (such as upload count and date), are saved to your account</li>
+    <li>Before the file picker opens, the app shows a <strong>"Before you import"</strong> notice that reads: <em>"To find event dates, your file (PDF or photo) is sent securely to our AI provider, Anthropic (USA), which reads the whole file and returns the calendar details. Anthropic doesn't use it to train AI models and may keep it for up to 30 days, or longer where required to enforce its Usage Policy or comply with the law. HappyHabit doesn't keep a copy of your file. We only save the events you choose to import. School documents can include things like staff names or addresses. We ask the AI to return only calendar information, and HappyHabit removes any email addresses or phone numbers from the event notes. You'll see every event and can edit or remove it before anything is saved."</em></li>
+    <li>To continue, you must tick <strong>"I'm authorised to share this file, and I agree to it being processed as described above."</strong> The <strong>Continue</strong> button stays disabled until you do. Tapping <strong>"Cancel"</strong> ends the import: no file is selected, read, or sent anywhere, and nothing is recorded</li>
+    <li>When you tap Continue, we record your agreement against your account (the date and time, and which version of the notice you agreed to) before the file picker opens. If we can't save that record, the import doesn't go ahead</li>
+    <li>The <strong>whole</strong> PDF or photo you choose is sent securely (encrypted in transit) to <strong>Anthropic</strong> (Claude AI, USA), solely to extract event details such as dates, titles, and times</li>
+    <li><strong>HappyHabit does not keep a copy of the file.</strong> It isn't saved to our storage, database, or logs, and the temporary copy on your phone is deleted after processing</li>
+    <li><strong>Anthropic</strong> does not use the file to train its AI models. Under its published commercial terms, it deletes API request data within 30 days, and may keep it longer only where needed to enforce its Usage Policy or to comply with the law</li>
+    <li>We ask the AI to return only calendar information (not names, contact details, or addresses), and we remove any email addresses or phone numbers from event notes. You review every extracted event, and can edit or remove it, before anything is saved</li>
+    <li>Only the <strong>calendar events you choose to import</strong>, along with basic usage metadata (the import date, page count, and number of events), are saved to your account</li>
   </ul>
 
   <h2>4. How We Use Your Data</h2>
   <ul>
     <li>To provide and operate the HappyHabit service</li>
     <li>To send push notifications for school event reminders and task completions</li>
-    <li>To process school calendar PDFs using AI (Anthropic Claude API) — PDFs are processed in real time and not stored</li>
+    <li>To process school calendar PDFs and photos using AI (Anthropic Claude API) — HappyHabit does not keep the file (see section 3)</li>
     <li>To track subscription plan limits (Free, Pro, Ultra, Ultimate)</li>
     <li>To monitor app stability and fix crashes via Sentry</li>
     <li>To respond to your support requests</li>
@@ -94,7 +98,7 @@
   <p>We use the following trusted third-party services:</p>
   <ul>
     <li><strong>Supabase</strong> (supabase.com) — database, authentication, and cloud storage. Data stored in EU region. <a href="https://supabase.com/privacy" target="_blank">Privacy Policy</a></li>
-    <li><strong>Anthropic</strong> (anthropic.com) — AI processing for school calendar PDF import. PDFs are processed in real time and not retained by Anthropic beyond the API request. <a href="https://www.anthropic.com/privacy" target="_blank">Privacy Policy</a></li>
+    <li><strong>Anthropic</strong> (anthropic.com) — AI processing for school calendar PDF/photo import (USA). Not used to train Anthropic's models; API request data is deleted within 30 days, unless needed longer to enforce Anthropic's Usage Policy or to comply with the law. <a href="https://www.anthropic.com/privacy" target="_blank">Privacy Policy</a></li>
     <li><strong>Sentry</strong> (sentry.io) — crash reporting and error monitoring. Anonymised stack traces only. <a href="https://sentry.io/privacy/" target="_blank">Privacy Policy</a></li>
     <li><strong>Google Firebase / FCM</strong> — push notification delivery. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
     <li><strong>Expo / EAS</strong> — app build and distribution infrastructure. <a href="https://expo.dev/privacy" target="_blank">Privacy Policy</a></li>
@@ -109,7 +113,8 @@
   <ul>
     <li>Account data is retained for as long as your account is active</li>
     <li>If you delete your account, all personal data is permanently deleted within 30 days</li>
-    <li>PDF import logs are retained for the current school year only</li>
+    <li>PDF import logs (import date, page count, number of events) are kept while your account is active, because they're used to apply your plan's import limit. You can delete an import, and the events it added, at any time from "View past imports" in the Calendar</li>
+    <li>Imported PDFs and photos are not kept by HappyHabit (see section 3)</li>
     <li>Crash reports are retained for 90 days</li>
     <li>Family invite codes expire after 15 minutes and are deleted after use</li>
   </ul>
@@ -144,7 +149,7 @@
   <p>The HappyHabit mobile app does not use cookies. The HappyHabit website (happyhabit.org) does not use tracking cookies or analytics cookies. No cookie consent banner is required.</p>
 
   <h2>13. International Data Transfers</h2>
-  <p>Your data is stored in Supabase infrastructure in the EU. When using the PDF import feature, data is temporarily processed by Anthropic (US-based) under Standard Contractual Clauses compliant with GDPR Article 46.</p>
+  <p>Your data is stored in Supabase infrastructure in the EU. When you use the PDF/photo import feature, the file you choose is sent to Anthropic in the USA for processing (see section 3). This transfer is covered by Anthropic's Data Processing Addendum, which is part of its Commercial Terms and includes the EU Standard Contractual Clauses (GDPR Article 46).</p>
 
   <h2>14. Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. We will notify you of significant changes via email or in-app notification. Continued use of HappyHabit after changes constitutes acceptance of the updated policy.</p>
