@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
 <title>Email Confirmed — HappyHabit</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -59,9 +61,16 @@
     // likely opened directly (bookmarked, reloaded, etc.) rather than via
     // the email link, so we show a more neutral message instead of
     // re-asserting a "confirmed" claim we can't verify.
+    // The fragment carries a live session token, and this page only needs to
+    // know whether one was there. Note that, then take the fragment out of
+    // the address bar and browser history straight away.
+    const hash = window.location.hash;
+    const hasToken = hash && hash.includes('access_token');
+    if (hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
     window.addEventListener('load', () => {
-      const hash = window.location.hash;
-      const hasToken = hash && hash.includes('access_token');
 
       if (!hasToken) {
         document.getElementById('icon').textContent = '👋';
