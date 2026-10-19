@@ -52,6 +52,7 @@
     <li><strong>Device information:</strong> Push notification token (to send reminders), device type (iOS/Android)</li>
     <li><strong>Kids View PIN:</strong> A 4-digit PIN set by the parent for the children's view — stored in encrypted form</li>
     <li><strong>School calendar data:</strong> Event titles, dates, reminder preferences entered by the parent</li>
+    <li><strong>Partner invites:</strong> If you use <strong>Invite partner</strong> to share your family with a partner on their own phone, we collect the partner's email address (entered by you), when the invite was sent, and whether and when it was used. The 6-digit code is only stored in a scrambled, one-way form, never as the code itself. A partner who joins uses your account and sees the same family data as you; no separate partner account is created</li>
     <li><strong>PDF import logs:</strong> Number of pages processed and events extracted when using the school calendar PDF import feature</li>
     <li><strong>Crash reports:</strong> Crash and error reports via Sentry, with technical details about the error and your device. We remove email addresses before sending and do not deliberately include names. Sentry is set not to store IP addresses. Reports are kept for up to 30 days.</li>
   </ul>
@@ -74,6 +75,7 @@
     <li>To provide and operate the HappyHabit service</li>
     <li>To send push notifications for school event reminders and task completions</li>
     <li>To process school calendar PDFs and photos using AI (Anthropic Claude API) — HappyHabit does not keep the file (see section 3)</li>
+    <li>To email a partner the invite code you asked us to send, and to show you who has joined your family (Settings → Invite partner)</li>
     <li>To track subscription plan limits (Free and Pro)</li>
     <li>To monitor app stability and fix crashes via Sentry</li>
     <li>To respond to your support requests</li>
@@ -84,7 +86,7 @@
   <p>We process your data under the following legal bases as defined by the General Data Protection Regulation (GDPR):</p>
   <ul>
     <li><strong>Contract performance:</strong> Processing necessary to provide the HappyHabit service you signed up for</li>
-    <li><strong>Legitimate interests:</strong> Crash reporting and app stability monitoring</li>
+    <li><strong>Legitimate interests:</strong> Crash reporting and app stability monitoring; sending a partner the invite email that the account holder asked for (the partner can simply ignore it)</li>
     <li><strong>Consent:</strong> Push notifications (you can withdraw consent at any time via device settings)</li>
   </ul>
 
@@ -102,7 +104,7 @@
     <li><strong>Google Firebase / FCM</strong> — push notification delivery. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
     <li><strong>Expo / EAS</strong> — app build and distribution infrastructure. <a href="https://expo.dev/privacy" target="_blank">Privacy Policy</a></li>
     <li><strong>RevenueCat</strong> (revenuecat.com) — subscription and payment management, purchase and entitlement status only, no card data. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy</a></li>
-    <li><strong>Brevo</strong> (brevo.com) — transactional email delivery. <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank">Privacy Policy</a></li>
+    <li><strong>Brevo</strong> (brevo.com) — transactional email delivery: account emails (such as password resets) and partner invite codes. <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank">Privacy Policy</a></li>
     <li><strong>Cloudflare</strong> (cloudflare.com) — DNS, content delivery and security for the happyhabit.org website, so website visitors' requests, including IP addresses, pass through Cloudflare; also business email routing. It is not used for the mobile app's data. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Privacy Policy</a></li>
     <li><strong>cron-job.org</strong> — scheduled keep-alive pings to our backend to keep it running — no user data involved. <a href="https://cron-job.org/en/privacy/" target="_blank">Privacy Policy</a></li>
   </ul>
@@ -114,6 +116,7 @@
     <li>If you delete your account, all personal data is permanently deleted within 30 days. See <a href="/delete-account.html">How to delete your account</a></li>
     <li>PDF import logs (import date, page count, number of events) are kept while your account is active, because they're used to apply your plan's import limit. You can delete an import, and the events it added, at any time from "View past imports" in the Calendar</li>
     <li>Imported PDFs and photos are not kept by HappyHabit (see section 3)</li>
+    <li>Partner invite records (partner email, dates, used or not) are kept while your account is active, so you can see who has access. An invite code works once and expires after 15 minutes. "Remove partner" signs out every other phone using your account. Invite records are deleted with your account</li>
     <li>Crash reports are retained for up to 30 days</li>
   </ul>
 
